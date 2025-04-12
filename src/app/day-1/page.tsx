@@ -38,7 +38,7 @@ const buttonVariants: Variants = {
     y: index * 40 - 12,
   }),
   animate: (index) => ({
-    opacity: 1,
+    opacity: [0, 0, 0, 0, 0, 1],
     y: index * 40,
     transition: {
       type: "tween",
@@ -76,13 +76,18 @@ const Day1 = () => {
             className="bg-zinc-100 rounded-full w-12 h-12 cursor-pointer"
             onClick={() => setIsOpen((open) => !open)}
           >
-            <AnimatePresence>
+            <AnimatePresence initial={false}>
               {isOpen ? (
                 <motion.span
                   key="close"
                   className="w-full h-full flex items-center justify-center rounded-full"
                   initial={{ opacity: 0 }}
-                  animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                  animate={{
+                    opacity: 1,
+                    scale: 1,
+                    filter: "blur(0px)",
+                    transition: { delay: 0.4 },
+                  }}
                   exit={{ opacity: 0, scale: 0.5, filter: "blur(10px)" }}
                   transition={{ ease: "easeIn", duration: 0.4 }}
                 >
@@ -93,7 +98,12 @@ const Day1 = () => {
                   key="open"
                   className="w-full h-full flex items-center justify-center rounded-full"
                   initial={{ opacity: 0 }}
-                  animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                  animate={{
+                    opacity: 1,
+                    scale: 1,
+                    filter: "blur(0px)",
+                    transition: { delay: 0.4 },
+                  }}
                   exit={{ opacity: 0, scale: 0.5, filter: "blur(10px)" }}
                   transition={{ ease: "easeIn", duration: 0.4 }}
                 >
