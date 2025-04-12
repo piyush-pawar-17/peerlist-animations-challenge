@@ -16,7 +16,8 @@ const menuVariants: Variants = {
     opacity: 1,
     y: -4,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.07,
+      duration: 0.25,
       type: "tween",
     },
   },
@@ -26,7 +27,8 @@ const menuVariants: Variants = {
     transition: {
       when: "afterChildren",
       type: "tween",
-      staggerChildren: 0.1,
+      staggerChildren: 0.07,
+      duration: 0.25,
       staggerDirection: -1,
     },
   },
@@ -38,15 +40,18 @@ const buttonVariants: Variants = {
     y: index * 40 - 12,
   }),
   animate: (index) => ({
-    opacity: [0, 0, 0, 0, 0, 1],
-    y: index * 40,
+    opacity: [0, 0, 0, 0, 1, 1],
+    y: index * 40 - (index + 1) * 4,
     transition: {
-      type: "tween",
+      type: "easeIn",
     },
   }),
   exit: (index) => ({
-    opacity: 0,
+    opacity: [1, 1, 1, 1, 0, 0],
     y: index * 40 - 12,
+    transition: {
+      type: "easeIn",
+    },
   }),
 };
 
