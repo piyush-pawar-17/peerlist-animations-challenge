@@ -10,3 +10,65 @@ body {
   color: var(--color-neutral-900);
   font-family: var(--font-geist-sans);
 }
+
+.day-2-loader {
+  animation-name: day-2-loader-spin;
+  animation-timing-function: cubic-bezier(0.51, -0.13, 0.43, 1.12);
+  animation-duration: 1500ms;
+  animation-delay: 50ms;
+  animation-iteration-count: infinite;
+  transform-origin: center center;
+}
+
+@keyframes day-2-loader-spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(1440deg);
+  }
+}
+
+.day-2-safe {
+  animation-name: day-2-scale;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  transform-origin: center center;
+}
+
+@keyframes day-2-scale {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.day-2-warning {
+  animation-name: day-2-shake;
+  animation-duration: 500ms;
+  animation-delay: 500ms;
+  animation-timing-function: ease-in-out;
+  transform-origin: center center;
+}
+
+@keyframes day-2-shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(2px, 0, 0);
+  }
+}

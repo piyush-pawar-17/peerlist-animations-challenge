@@ -21,10 +21,10 @@ const Home = () => {
           </li>
           <li>
             <Link
-              href="/"
+              href="/day-2"
               className="hover:underline transition-all duration-200 flex items-center gap-1"
             >
-              <CircleDashed size={16} /> Day 2 (to be added)
+              <Check size={16} /> Day 2 (Dynamic Status Indicator)
             </Link>
           </li>
           <li>
@@ -53,19 +53,6 @@ const Home = () => {
           </li>
         </ol>
       </div>
-
-      <footer className="fixed bottom-0 inset-x-0 text-center p-4 text-sm">
-        <p>
-          Made by{" "}
-          <a
-            href="https://piyushpawar.dev/github"
-            target="_blank"
-            className="underline"
-          >
-            Piyush Pawar
-          </a>
-        </p>
-      </footer>
     </main>
   );
 };

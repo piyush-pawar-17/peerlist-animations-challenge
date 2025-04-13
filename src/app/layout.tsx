@@ -29,6 +29,18 @@ const RootLayout = ({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <footer className="fixed bottom-0 inset-x-0 text-center p-4 text-sm">
+          <p>
+            Made by{" "}
+            <a
+              href="https://piyushpawar.dev"
+              target="_blank"
+              className="underline"
+            >
+              Piyush Pawar
+            </a>
+          </p>
+        </footer>
       </body>
     </html>
   );
