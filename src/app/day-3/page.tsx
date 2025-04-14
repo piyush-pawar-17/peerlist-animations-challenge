@@ -5,8 +5,6 @@ import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
 import { MoveLeft } from "lucide-react";
 
-import { cn } from "@/utils";
-
 import type { Variants } from "motion/react";
 
 const checkboxStroke: Variants = {
