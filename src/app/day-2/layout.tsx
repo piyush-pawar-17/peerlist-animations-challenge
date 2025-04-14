@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: "An elegant and informative status indicator",
 };
 
-const Day1Layout = ({
+const Day2Layout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -13,4 +13,4 @@ const Day1Layout = ({
   return <>{children}</>;
 };
 
-export default Day1Layout;
+export default Day2Layout;
