@@ -159,7 +159,7 @@ const Todo = ({ label }: { label: string }) => {
             y="3"
             rx="2"
             variants={checkboxStroke}
-            className="fill-none stroke-zinc-300"
+            className="fill-none stroke-zinc-400"
           />
           <motion.rect
             width="18"
