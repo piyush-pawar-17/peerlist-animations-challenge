@@ -37,10 +37,10 @@ const Home = () => {
           </li>
           <li>
             <Link
-              href="/"
+              href="/day-4"
               className="hover:underline transition-all duration-200 flex items-center gap-1"
             >
-              <CircleDashed size={16} /> Day 4 (to be added)
+              <Check size={16} /> Day 4 (Animated Toggles)
             </Link>
           </li>
           <li>
