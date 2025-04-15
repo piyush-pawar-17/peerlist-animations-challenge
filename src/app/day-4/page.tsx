@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
+import { useWindowSize } from "usehooks-ts";
 import { MoveLeft } from "lucide-react";
 
 import { cn } from "@/utils";
@@ -31,26 +32,26 @@ const premiumLabel: Variants = {
 };
 
 const planLabel: Variants = {
-  initial: {
+  initial: (width) => ({
     y: 14,
-    fontSize: "14px",
-  },
-  free: {
+    fontSize: width < 640 ? "12px" : "14px",
+  }),
+  free: (width) => ({
     y: 14,
-    fontSize: "14px",
+    fontSize: width < 640 ? "12px" : "14px",
     transition: {
       ease: "easeInOut",
       duration: 0.2,
     },
-  },
-  premium: {
+  }),
+  premium: (width) => ({
     y: 0,
-    fontSize: "18px",
+    fontSize: width < 640 ? "16px" : "18px",
     transition: {
       ease: "easeInOut",
       duration: 0.2,
     },
-  },
+  }),
 };
 
 const planLabelText: Variants = {
@@ -75,6 +76,8 @@ const Day4 = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [activePlanTab, setActivePlanTab] = useState(0);
 
+  const { width = 0 } = useWindowSize();
+
   return (
     <main className="px-6 sm:px-10 md:px-20">
       <header className="py-10 sm:py-16 md:py-20">
@@ -94,7 +97,7 @@ const Day4 = () => {
             <button
               key={`pricing-${idx}`}
               className={cn(
-                "cursor-pointer isolate relative w-52 h-16 rounded-full py-2 text-lg text-black",
+                "cursor-pointer isolate relative w-44 sm:w-52 h-16 rounded-full py-2 text-base sm:text-lg text-black",
                 {
                   "text-white": activeTab === idx,
                 },
@@ -129,6 +132,7 @@ const Day4 = () => {
 
                     <motion.span
                       variants={planLabel}
+                      custom={width}
                       className="absolute isolate top-1/2 w-full px-3 py-1 -translate-y-1/2 left-1/2 flex gap-1 justify-center -translate-x-1/2"
                     >
                       {Array.from({ length: 2 }).map((_, premiumIdx) => (
