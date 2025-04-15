@@ -92,14 +92,16 @@ const Day4 = () => {
       </header>
 
       <section className="relative bg-white border border-zinc-200 rounded-2xl p-4 grid place-items-center h-96">
-        <div className="flex gap-1 shadow-md rounded-full">
+        <div className="flex gap-1 shadow-lg rounded-full">
           {Array.from({ length: 2 }).map((_, idx) => (
             <button
               key={`pricing-${idx}`}
               className={cn(
-                "cursor-pointer isolate relative w-44 sm:w-52 h-16 rounded-full py-2 text-base sm:text-lg text-black",
+                "cursor-pointer isolate relative sm:w-52 h-16 rounded-full py-2 text-base sm:text-lg text-black",
                 {
                   "text-white": activeTab === idx,
+                  "w-32": idx === 0,
+                  "w-44 ": idx === 1,
                 },
               )}
               onClick={() => {
