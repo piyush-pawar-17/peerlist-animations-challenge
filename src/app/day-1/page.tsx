@@ -73,7 +73,7 @@ const Day1 = () => {
         <h1 className="text-2xl font-medium">Day 1 - Fluid Menu Animation</h1>
       </header>
 
-      <section className="relative bg-white border border-zinc-200 rounded-2xl p-4 grid place-items-center h-96">
+      <section className="relative bg-white border border-zinc-200 rounded-2xl p-4 grid place-items-center h-[560px]">
         <div>Open the menu in the top left corner</div>
 
         <div className="absolute top-4 left-4 flex flex-col">

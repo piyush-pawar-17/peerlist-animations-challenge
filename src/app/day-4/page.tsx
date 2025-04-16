@@ -91,7 +91,7 @@ const Day4 = () => {
         <h1 className="text-2xl font-medium">Day 4 - Animated Toggles</h1>
       </header>
 
-      <section className="relative bg-white border border-zinc-200 rounded-2xl p-4 grid place-items-center h-96">
+      <section className="relative bg-white border border-zinc-200 rounded-2xl p-4 grid place-items-center h-[560px]">
         <div className="flex gap-1 shadow-lg rounded-full">
           {Array.from({ length: 2 }).map((_, idx) => (
             <button

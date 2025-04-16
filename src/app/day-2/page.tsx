@@ -47,7 +47,7 @@ const Day2 = () => {
         </h1>
       </header>
 
-      <section className="relative bg-white border border-zinc-200 rounded-2xl p-4 grid place-items-center h-96">
+      <section className="relative bg-white border border-zinc-200 rounded-2xl p-4 grid place-items-center h-[560px]">
         <motion.button
           layout
           className={cn(

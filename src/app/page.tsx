@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Check, CircleDashed } from "lucide-react";
+import { Check } from "lucide-react";
 
 const Home = () => {
   return (
@@ -45,10 +45,10 @@ const Home = () => {
           </li>
           <li>
             <Link
-              href="/"
+              href="/day-5"
               className="hover:underline transition-all duration-200 flex items-center gap-1"
             >
-              <CircleDashed size={16} /> Day 5 (to be added)
+              <Check size={16} /> Day 5 (Shared Layout Tabs)
             </Link>
           </li>
         </ol>

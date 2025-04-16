@@ -214,8 +214,8 @@ const Day3 = () => {
         <h1 className="text-2xl font-medium">Day 3 - Animated Checkboxes</h1>
       </header>
 
-      <section className="relative bg-white border border-zinc-200 rounded-2xl p-4 grid place-items-center h-96">
-        <div className="flex flex-col gap-2">
+      <section className="relative bg-white border border-zinc-200 rounded-2xl p-4 grid place-items-center h-[560px]">
+        <div className="flex flex-col">
           {todos.map((todo) => (
             <Todo key={todo} label={todo} />
           ))}
