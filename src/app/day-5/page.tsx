@@ -27,7 +27,11 @@ const Day5 = () => {
       </header>
 
       <section className="relative bg-white border border-zinc-200 rounded-2xl p-4 grid place-items-center h-[560px]">
-        <div className="h-96">
+        <div
+          className={cn("h-96", {
+            "w-full": width < 480,
+          })}
+        >
           <h3 className="font-medium text-lg mb-4">Collectibles</h3>
 
           <div className="flex flex-col gap-4">
@@ -101,7 +105,7 @@ const Day5 = () => {
                       activeTab === "pack"
                         ? {
                             rotate: -12,
-                            x: width < 480 ? 80 : 144,
+                            x: width < 480 ? 96 : 144,
                             transition: { ease: "linear", bounce: 0 },
                           }
                         : {
@@ -200,7 +204,7 @@ const Day5 = () => {
                       "size-full": activeTab === "card",
                       "rounded-2xl size-20 ease-in translate-x-36 rotate-12 -translate-y-24":
                         activeTab === "pack",
-                      "translate-x-20": activeTab === "pack" && width < 480,
+                      "translate-x-24": activeTab === "pack" && width < 480,
                     })}
                   />
                   <AnimatePresence initial={false}>
