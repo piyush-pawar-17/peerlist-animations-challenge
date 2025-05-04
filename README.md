@@ -1,3 +1,3 @@
 # Peerlist UI Animation Challenges
 
-UI Animation Challenges organized by [Peerlist](https://peerlist.io/challenges/ui-animation-challenge)
+My submissions for UI Animation Challenges by [Peerlist](https://peerlist.io/challenges/ui-animation-challenge)

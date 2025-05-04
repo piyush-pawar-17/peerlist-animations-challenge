@@ -8,7 +8,7 @@ import { MoveLeft, Menu, X, House, Mail, User, Settings } from "lucide-react";
 import type { Variants } from "motion/react";
 
 const menuVariants: Variants = {
-  inital: {
+  initial: {
     opacity: 0,
     y: -8,
   },
@@ -35,7 +35,7 @@ const menuVariants: Variants = {
 };
 
 const buttonVariants: Variants = {
-  inital: (index) => ({
+  initial: (index) => ({
     opacity: 0,
     y: index * 40 - 12,
   }),
