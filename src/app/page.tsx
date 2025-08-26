@@ -7,7 +7,14 @@ const Home = () => {
       <div>
         <header className="mb-4">
           <h1 className="text-xl sm:text-2xl md:text-3xl font-medium">
-            Peerlist UI Animation Challenges
+            <a
+              href="https://peerlist.io/challenges/ui-animation-challenge"
+              target="_blank"
+              rel="noopenner noreferrer"
+              className="hover:underline"
+            >
+              Peerlist UI Animation Challenges
+            </a>
           </h1>
         </header>
         <ol className="flex flex-col gap-2 text-sm sm:text-base">
